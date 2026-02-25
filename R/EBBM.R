@@ -16,11 +16,11 @@
 #' @examples
 #' rm(list = ls(all = TRUE))
 #' library(EBBM)
-#' data("ip_1")
-#' data("input_1")
+#' data("ip")
+#' data("input")
 #' number_bicluster <- 6
 #' bic_row_labels <- c(rep(0,dim(ip)[1]))
-#' patterns_found_by_EBBM <- multiple_GSB(a = ip_1,b = input_1,iteration = 1000,burn_in = 500,bic_row_labels = bic_row_labels,number_bicluster = number_bicluster)
+#' patterns_found_by_EBBM <- multiple_GSB(a = ip,b = input,iteration = 1000,burn_in = 500,bic_row_labels = bic_row_labels,number_bicluster = number_bicluster)
 #'
 
 

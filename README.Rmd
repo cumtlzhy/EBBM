@@ -1,30 +1,17 @@
----
-output: github_document
----
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 
 #  EBBM : A novel biclustering algorithm for mining m6A co-methylation patterns based on beta-binomial distribution and data screening strategy
 
 <!-- badges: start -->
+   The aim of EBBM is to identify co-methylation patterns within MeRIP-Seq data. EBBM can be applied directly to the IP and input data matrices to mine m6A co-methylation, thus avoiding the problems associated with traditional methods that require the IP and input data matrices to be approximated into methylation levels first. Crucially, EBBM effectively mitigates noise arising from inherent sequencing errors in MeRIP-Seq technology, thereby enhancing the reliability of the results of m6A co-methylation pattern analysis. It can also be used to mine patterns in data that follows a beta-binomial mixture distribution. If you use EBBM to mine other types of data, the input matrices a and b must be numeric. 
 <!-- badges: end -->
 
-The aim of EBBM is to identify co-methylation patterns within MeRIP-Seq data. EBBM can be applied directly to the IP and input data matrices to mine m6A co-methylation, thus avoiding the problems associated with traditional methods that require the IP and input data matrices to be approximated into methylation levels first. Crucially, EBBM effectively mitigates noise arising from inherent sequencing errors in MeRIP-Seq technology, thereby enhancing the reliability of the results of m6A co-methylation pattern analysis. It can also be used to mine patterns in data that follows a beta-binomial mixture distribution. If you use EBBM to mine other types of data, the input matrices a and b must be numeric. 
+
 
 ## Installation
 
 You can install the released version of BBM from [github](https://github.com/cumtlzhy/BBM.git) with:
 
-``` r
+``` 
 library(usethis)
 library(devtools)
 install_github("cumtlzhy/EBBM")
