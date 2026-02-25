@@ -1,0 +1,48 @@
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# A novel biclustering algorithm for mining m6A co-methylation patterns based on beta-binomial distribution and data screening strategy
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+The aim of EBBM is to identify co-methylation patterns within MeRIP-Seq data.
+EBBM can be applied directly to the IP and input data matrices to mine m6A
+co-methylation, thus avoiding the problems associated with traditional methods 
+that require the IP and input data matrices to be approximated into methylation 
+levels first. Crucially, EBBM effectively mitigates noise arising from inherent 
+sequencing errors in MeRIP-Seq technology, thereby enhancing the reliability of 
+the results of m6A co-methylation pattern analysis. It can also be used to mine 
+patterns in data that follows a beta-binomial mixture distribution. If you use
+EBBM to mine other types of data, the input matrices a and b must be numeric. 
+
+## Installation
+
+You can install the released version of EBBM from
+[github](https://github.com/cumtlzhy/EBBM.git) with:
+
+``` r
+library(usethis)
+library(devtools)
+install_github("cumtlzhy/EBBM")
+```
+
+## Example
+
+This is a basic example which shows you how to use EBBM:
+
+``` r
+
+## basic example code
+rm(list = ls(all = TRUE))
+library(EBBM)
+data("ip")
+data("input")
+number_bicluster <- 6
+bic_row_labels <- c(rep(0,dim(ip)[1]))
+patterns_found_by_EBBM <- multiple_GSB(a = ip,b = input,iteration = 1000,burn_in = 500,bic_row_labels = bic_row_labels,number_bicluster = number_bicluster)
+```
+## Contact
+Please contact the maintainer of EBBM if you have encountered any problems:
+
+Zhaoyang Liu: <zy.liu@cumt.edu.cn>

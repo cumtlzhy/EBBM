@@ -10,7 +10,7 @@ Authors@R: c(
     )
   )
 Description: This package enables the discovery of co-methylation patterns for the epigenetic transcription modification m6A methylation. By inputting raw m6A sequencing reads from IP samples and input samples, it automatically uncovers co-methylation patterns hidden within the data.
-License: use_mit_license()
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: 

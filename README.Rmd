@@ -1,36 +1,55 @@
+---
+output: github_document
+---
 
-#  EBBM : A novel biclustering algorithm for mining m6A co-methylation patterns based on beta-binomial distribution and data screening strategy
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# EBBM
 
 <!-- badges: start -->
-   The aim of EBBM is to identify co-methylation patterns within MeRIP-Seq data. EBBM can be applied directly to the IP and input data matrices to mine m6A co-methylation, thus avoiding the problems associated with traditional methods that require the IP and input data matrices to be approximated into methylation levels first. Crucially, EBBM effectively mitigates noise arising from inherent sequencing errors in MeRIP-Seq technology, thereby enhancing the reliability of the results of m6A co-methylation pattern analysis. It can also be used to mine patterns in data that follows a beta-binomial mixture distribution. If you use EBBM to mine other types of data, the input matrices a and b must be numeric. 
 <!-- badges: end -->
 
-
+The goal of EBBM is to ...
 
 ## Installation
 
-You can install the released version of BBM from [github](https://github.com/cumtlzhy/BBM.git) with:
+You can install the development version of EBBM from [GitHub](https://github.com/) with:
 
-``` 
-library(usethis)
-library(devtools)
-install_github("cumtlzhy/EBBM")
-
+``` r
+# install.packages("pak")
+pak::pak("cumtlzhy/EBBM")
 ```
 
 ## Example
 
-This is a basic example which shows you how to use EBBM:
+This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-
-## basic example code
-rm(list = ls(all = TRUE))
 library(EBBM)
-data("ip_1")
-data("input_1")
-number_bicluster <- 6
-bic_row_labels <- c(rep(0,dim(ip)[1]))
-patterns_found_by_BBM <- multiple_GSB(a = ip,b = input,iteration = 1000,burn_in = 500,bic_row_labels = bic_row_labels,number_bicluster = number_bicluster)
+## basic example code
 ```
 
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+
+```{r cars}
+summary(cars)
+```
+
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+
+You can also embed plots, for example:
+
+```{r pressure, echo = FALSE}
+plot(pressure)
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
