@@ -19,3 +19,5 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 RoxygenNote: 7.3.3
+URL: https://github.com/cumtlzhy/EBBM
+BugReports: https://github.com/cumtlzhy/EBBM/issues
