@@ -1,0 +1,21 @@
+Package: EBBM
+Type: Package
+Title: A novel biclustering algorithm for mining m6A co-methylation patterns based on beta-binomial distribution and data screening strategy
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "zhaoyang", "liu",
+      email = "zy.liu@cumt.edu.cn",
+      role = c("aut", "cre")
+    )
+  )
+Description: This package enables the discovery of co-methylation patterns for the epigenetic transcription modification m6A methylation. By inputting raw m6A sequencing reads from IP samples and input samples, it automatically uncovers co-methylation patterns hidden within the data.
+License: use_mit_license()
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 3.5)
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.3.3
